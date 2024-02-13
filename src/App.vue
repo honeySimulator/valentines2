@@ -1,4 +1,5 @@
 <template>
+  <div id="app" class="app">
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/quiz">Quiz</router-link> |
@@ -6,6 +7,7 @@
     <router-link to="/test">Story</router-link>
   </nav>
   <router-view />
+  </div>
 </template>
 
 <script>
