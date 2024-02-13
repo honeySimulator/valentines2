@@ -45,10 +45,9 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          strategy: 'replace'
-          cleanup: true
-          publish_dir: './dist'
+            deploy_key: ${{ secrets.PRIVATE_KEY }}
+            external_repository: your_github_username/your_github_username.github.io
+            publish_branch: gh-pages
+            publish_dir: ./dist
